@@ -5,11 +5,24 @@ void setup() {
 }
 
 void draw() {
+
   drawARandomCircle();
   if (mousePressed) {
-    //drawACircleAt(mouseX, mouseY);
+    drawACircleAt(mouseX, mouseY);
+    for (int i = 0; i < width; i += width/10) {
+      drawACircleAt(i, mouseY);
+    }
   }
 }
+
+
+
+void drawACircleAt(int x, int y) {
+  fill(150, 0, 255);
+  ellipse(x, y, 30, 30);
+}
+
+
 
 void drawARandomCircle() {
   fill(0, random(255), random(100, 255));      //set random fill
