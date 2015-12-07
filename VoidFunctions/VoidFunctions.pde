@@ -4,6 +4,13 @@ void setup() {
 
 void draw() {
   blueSquare();
+  circleAtMouse(255, 5, 8, 200);
+  circleAtMouse(50, 255, 80, 80);
+}
+
+void circleAtMouse(float r, float g, float b, float d) {
+  fill(r, g, b);
+  ellipse(mouseX, mouseY, d, d);
 }
 
 void blueSquare() {
